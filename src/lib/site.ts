@@ -3,8 +3,8 @@
 /** Every "Book a session" CTA (and other CTAs) routes here. */
 export const TIMETABLE_HREF = "/#classes";
 
-/** TODO: wire the real WhatsApp link, e.g. https://wa.me/254XXXXXXXXX */
-export const WHATSAPP_URL: string = "#";
+/** Set this to a verified wa.me link when contact details are available. */
+export const WHATSAPP_URL: string | null = null;
 
 /** TODO: wire real socials later. */
 export const SOCIALS: { label: string; href: string }[] = [];

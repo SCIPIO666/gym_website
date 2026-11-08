@@ -1,4 +1,3 @@
-import { perLabel } from "@/lib/orders";
 import PricingShell from "./PricingShell";
 import RectCta from "./RectCta";
 import "./Pricing.css";
@@ -18,6 +17,7 @@ const STATIC_PLANS: Plan[] = [
 ];
 
 const kes = (n: number) => n.toLocaleString("en-KE");
+const perLabel = (days: number) => `KES / ${days === 1 ? "day" : days === 30 ? "month" : days === 90 ? "3 months" : days === 180 ? "6 months" : days === 365 ? "year" : `${days} days`}`;
 
 /** "30" -> "One month". Only describes the length of the plan, never what it includes. */
 function validity(days: number): string {

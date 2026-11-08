@@ -292,11 +292,19 @@ export default function Directions() {
             <article className="ldir__card ldir__card--contact" data-info>
               <span className="ldir__k">Contact</span>
               <div className="ldir__rows">
-                <a className="ldir__rowlink" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  <span className="ldir__ico"><WhatsAppIcon /></span>
-                  <span className="ldir__lbl">WhatsApp us</span>
-                  <i><Arrow /></i>
-                </a>
+                {WHATSAPP_URL ? (
+                  <a className="ldir__rowlink" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    <span className="ldir__ico"><WhatsAppIcon /></span>
+                    <span className="ldir__lbl">WhatsApp us</span>
+                    <i><Arrow /></i>
+                  </a>
+                ) : (
+                  <span className="ldir__rowlink" aria-disabled="true" title="Contact link not configured">
+                    <span className="ldir__ico"><WhatsAppIcon /></span>
+                    <span className="ldir__lbl">WhatsApp (demo)</span>
+                    <i><Arrow /></i>
+                  </span>
+                )}
                 <a className="ldir__rowlink" href={MAPS_URL} target="_blank" rel="noopener noreferrer">
                   <span className="ldir__ico"><PinIcon /></span>
                   <span className="ldir__lbl">Open in Google Maps</span>

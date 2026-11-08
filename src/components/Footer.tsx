@@ -27,7 +27,7 @@ export default function Footer() {
             <h4>Start</h4>
             <span style={{ opacity: 0.5, cursor: "not-allowed" }} title="Demo — not connected">Book a session</span>
             <span style={{ opacity: 0.5, cursor: "not-allowed" }} title="Demo — not connected">Member login</span>
-            <a href={WHATSAPP_URL}>WhatsApp</a>
+            {WHATSAPP_URL ? <a href={WHATSAPP_URL}>WhatsApp</a> : <span title="Contact link not configured">WhatsApp</span>}
           </div>
         </div>
         <div className="foot-bottom">
